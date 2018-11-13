@@ -1,41 +1,54 @@
-// Import the React and ReactDOM
-//  -using ES6 modules
 import React from 'react';
 import ReactDOM from 'react-dom';
+import faker from 'faker';
 
-// defining a function to be used within the functional component
-function getButtonText() {
-    // return { text: 'Click me'}   -> cannot parse js objects as text implicitly
-    return 'Click me!';
-}
+import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 
-// Create a react component
-//  -this is a functional component
+
 const App = () => {
-
-    const labelText = 'Enter name:';
-
     return (
-    <div>
-        {/* 'for' property needed to be renamed to 'htmlFor', check in console to register these types of errors */}
-        <label  htmlFor="name" className="label">{labelText}</label>
-        <input type="text" id="name"/>
-        {/* 
-            -Styles must be passed as an object
-            -replace normal css properties with jsx compatible ones by removing dashes and using camelCase notation
-         */}
-        <button style={{color: 'white', backgroundColor: 'blue'}}>
-        {/* To reference js variables and function wrap code in curly braces */}
-            {getButtonText()}
-        </button>
-    </div>
+        <div className="ui container comments">
+            <ApprovalCard>
+                <div>
+                    <h4>Pretty Cool</h4>
+                    This will work. If div omitted it wouldnt work
+                </div>
+            </ApprovalCard>
+            <ApprovalCard>
+                {/* Nested component available as props.children in parent component */}
+                <CommentDetail 
+                    author="Sam" 
+                    timeAgo="Today at 4:45PM"
+                    comment="React is pretty cool"
+                    avatar={faker.image.avatar()}
+                />
+            </ApprovalCard>
+            <ApprovalCard>
+                {/* 
+                    -Nesting CommentDetail component
+                    -passing author/timeAgo/comment prop
+                */}
+                <CommentDetail 
+                    author="George" 
+                    timeAgo="Yesterday at 3:12AM"
+                    comment="Yes, finally i can have a nice modular codebase for my front end"
+                    avatar={faker.image.avatar()}
+                />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail 
+                    author="Jenna" 
+                    timeAgo="Feb 12 3:00AM"
+                    comment="I prefer the very popular vanilla js lib"
+                    avatar={faker.image.avatar()}
+                />
+            </ApprovalCard>
+        </div>
     );
 };
 
-// Take the react component and show it on the screen
 ReactDOM.render(
-    // Earlier created react components
     <App />,
-    // Dom element within which this component will be rendered
     document.querySelector('#root')
 );
