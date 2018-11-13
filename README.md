@@ -17,4 +17,7 @@ Using default create-react-app build and scripts
     * Referencing JS in JSX
     * JSX limitations
 
-1. 
+1. components
+    * nesting components
+    * creating reusable and configurable components
+    * passing props from parent to child and vice versa
