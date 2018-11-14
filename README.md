@@ -21,3 +21,15 @@ Using default create-react-app build and scripts
     * nesting components
     * creating reusable and configurable components
     * passing props from parent to child and vice versa
+
+1. seasons
+    * class components
+    * initializing state
+    * updating state
+    * graceful error handling
+    * conditional rendering
+    * lifecycle methods
+    * config objects
+    * default props
+    
+1. gallery
