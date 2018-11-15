@@ -33,3 +33,10 @@ Using default create-react-app build and scripts
     * default props
     
 1. gallery
+    * event handling
+    * user input
+    * solving context issues
+    * HTTP requests using axios
+    * rendering lists
+    * unique key prop
+    * react refs
