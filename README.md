@@ -8,6 +8,8 @@ Using default create-react-app build and scripts
 
 ## Technologies
 
+React 16, Redux 4
+
 ## Branches
 
 1. master
