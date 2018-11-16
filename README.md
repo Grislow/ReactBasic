@@ -46,3 +46,8 @@ Using default create-react-app build and scripts
 1. youtube
     * youtube search react app
     * summary of previous topics
+
+1. songs
+    * introduction to redux
+    * integrating react with redux
+    
