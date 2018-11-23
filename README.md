@@ -53,3 +53,11 @@ React 16, Redux 4
     * introduction to redux
     * integrating react with redux
     
+1. posts
+    * async action creators
+    * redux-thunk
+    * reducers in depth
+    * memoizing
+    * calling action creators from within an action creator
+    * using lodash
+    
