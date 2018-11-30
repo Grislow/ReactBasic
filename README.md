@@ -4,7 +4,7 @@ Step by step presentation of basic react concepts.
 
 ## Build
 
-Using default create-react-app build and scripts
+Using default create-react-app boilerplate
 
 ## Technologies
 
@@ -53,3 +53,19 @@ React 16, Redux 4
     * introduction to redux
     * integrating react with redux
     
+1. posts
+    * async action creators
+    * redux-thunk
+    * reducers in depth
+    * memoizing
+    * calling action creators from within an action creator
+    * using lodash
+    
+1. streams
+    * simplified twitch clone
+    * navigation with react-router
+    * Google OAuth authentication
+    * handling form data with redux-form
+    * CRUD operations
+    * error handling
+
